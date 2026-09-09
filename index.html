@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShopMail — Online Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="#" onclick="goHome()"><span class="bag">🛍️</span><span>Shop<span class="red">Mail</span><small>Shop More. Live Better.</small></span></a>
+  <div class="search"><input id="searchInput" placeholder="Search for products, brands and more..."><button onclick="searchProducts()">⌕</button></div>
+  <div class="header-actions">
+    <div class="delivery">⌖ <span>Deliver to<br><b>India</b></span></div>
+    <div class="account">♙ <span>Hello, Sign in<br><b>Account⌄</b></span></div>
+    <button class="cart-head" onclick="openCart()">🛒 <b>Cart</b><i id="cartCount">0</i></button>
+  </div>
+</header>
+<nav class="nav">
+  <button class="categories">☰ &nbsp; All Categories</button>
+  <a href="#deals">Today's Deals</a><a href="#featured">Best Sellers</a><a href="#">New Arrivals</a>
+  <a href="#">Electronics</a><a href="#">Fashion</a><a href="#">Home & Living</a><a href="#">Beauty</a><a href="#">Sports</a><a href="#">Toys & Games</a>
+</nav>
+
+<main id="home">
+<section class="hero"><div class="hero-copy"><p class="eyebrow">SHOPMAIL EXCLUSIVE</p><h1>Everything You Need,<br><span>One Place</span></h1><p>Top Brands. Great Prices. A Better You.</p><button class="primary" onclick="document.querySelector('#deals').scrollIntoView({behavior:'smooth'})">Shop Now →</button></div><div class="hero-art"><div class="device laptop"></div><div class="device phone"></div><div class="device watch"></div><div class="plant">🌿</div></div></section>
+<section class="benefits"><div>🚚 <b>Free Delivery</b><small>on orders above ₹499</small></div><div>🛡️ <b>Secure Payments</b><small>100% safe and secure</small></div><div>📦 <b>Easy Returns</b><small>30 days return policy</small></div></section>
+<section class="section"><h2>Shop by Category</h2><div class="category-row"><div>💻<span>Electronics</span></div><div>👕<span>Fashion</span></div><div>🛋️<span>Home & Living</span></div><div>🧴<span>Beauty</span></div><div>🧺<span>Appliances</span></div><div>📱<span>Mobiles</span></div><div>🏋️<span>Sports</span></div><div>🧸<span>Toys</span></div><div>📚<span>Books</span></div><div>🚗<span>Auto</span></div></div></section>
+<section class="promos"><article><div><h3>Smartphones<br>For A Smarter You</h3><p>Latest Models. Best Prices.</p><button class="secondary">Shop Now →</button></div><span>📱</span></article><article><div><h3>Fashion<br>That Fits You</h3><p>Style for Every Story.</p><button class="secondary">Shop Now →</button></div><span>🧥</span></article><article><div><h3>Home Essentials<br>For Better Living</h3><p>Make your space more you.</p><button class="secondary">Shop Now →</button></div><span>🛋️</span></article></section>
+<section class="section" id="deals"><div class="section-head"><h2>⚡ Deals of the Day</h2><a>View All</a></div><div class="products" id="dealProducts"></div></section>
+<section class="section" id="featured"><div class="section-head"><h2>⭐ Featured Products</h2><a>View All</a></div><div class="products" id="featuredProducts"></div></section>
+</main>
+
+<section id="productPage" class="page hidden"></section>
+<section id="cartPage" class="page hidden"></section>
+
+<footer><div class="footer-brand"><div class="logo"><span class="bag">🛍️</span><span>Shop<span class="red">Mail</span><small>Shop More. Live Better.</small></span></div><p>Your one-stop destination for everything you love.<br>Great products. Better prices. Happier you.</p></div><div><b>Shop</b><a>All Categories</a><a>Today's Deals</a><a>Best Sellers</a></div><div><b>Help</b><a>Track Your Order</a><a>Returns & Refunds</a><a>Shipping Info</a></div><div><b>About</b><a>Our Story</a><a>Careers</a><a>Sell with Us</a></div></footer>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
